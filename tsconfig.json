@@ -1,0 +1,39 @@
+{
+  "extends": "./tsconfig.paths.json",
+  "compilerOptions": {
+    /* IMPORTANT! - this allows our JSX to be transpiled correctly */
+    "jsx": "react-jsx",
+    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "es6",
+    /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "esModuleInterop": true,
+    /* Need for Webpack config file */
+    "allowSyntheticDefaultImports": true,
+    /* Ensure that casing is correct in imports. */
+    "forceConsistentCasingInFileNames": true,
+    /* Enable all strict type-checking options. */
+    "strict": true,
+    /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom",
+      "webpack-env"
+    ],
+    "module": "esnext"
+    //    "moduleDetection": "force"
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.json",
+    "**/*.js"
+  ],
+  "files": [
+    "globals.d.ts"
+  ]
+}
